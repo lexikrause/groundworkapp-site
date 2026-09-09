@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Groundwork — Privacy policy</title>
+<meta name="description" content="How Groundwork handles your data: it stays on your phone.">
+<style>
+:root { color-scheme: light dark; }
+body {
+  margin: 0;
+  background: #f4f6f8;
+  color: #1b2732;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+main { max-width: 66ch; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+.eyebrow { margin: 0; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: #56646f; }
+h1 { margin: 0.2rem 0 0.4rem; font-size: 2rem; line-height: 1.15; }
+.meta { margin: 0 0 2rem; color: #56646f; }
+h2 { margin: 2rem 0 0.5rem; font-size: 1.2rem; line-height: 1.3; }
+p { margin: 0 0 0.9rem; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #ccd5dd; color: #56646f; font-size: 0.92rem; }
+@media (prefers-color-scheme: dark) {
+  body { background: #0f151b; color: #e3e8ed; }
+  .eyebrow, .meta, footer { color: #8fa0ae; }
+  footer { border-top-color: #2b3945; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="eyebrow">Groundwork</p>
+<h1>Privacy policy</h1>
+<p class="meta">Last updated 9 September 2026</p>
+<h2>The short version</h2>
+<p>This app keeps what you log on your phone. There is no account, no sign-in, and no server belonging to this app. Nothing you record — migraines, symptoms, aura, medication, sleep or cycle — is uploaded anywhere.</p>
+<p>One thing does leave your phone, and only one: to fetch a weather forecast, the app sends your approximate location to a weather service. It never sends anything you have logged about your health.</p>
+<p>Everything below is the detail behind those two paragraphs.</p>
+<h2>What stays on your device</h2>
+<p>Your symptom entries, migraine episodes, aura events, medication doses, period starts, sleep nights and pressure readings are stored in a database on your phone, inside this app's private storage. No other app can read it and it is not transmitted.</p>
+<p>Android's automatic cloud backup is switched off for this app, so the operating system does not copy that database to your Google account. That is a deliberate choice: it means your health record is not sitting in a cloud backup you did not think about, and it also means reinstalling the app starts you empty unless you import a backup yourself.</p>
+<p>The app writes short diagnostic lines to the phone's own system log — counts and timings only, such as how many rows were exported. It never writes what you logged. Those lines stay on the device.</p>
+<h2>The one thing that leaves, and exactly what it contains</h2>
+<p>To show pressure trends and forecasts, the app requests weather data from Open-Meteo (open-meteo.com), a free weather API. Each request contains an approximate latitude and longitude and the time range being asked about. That is all it contains.</p>
+<p>It does not contain your name, your device identifier, an account, or anything you have logged. A weather service cannot learn from this app that you had a migraine, because the app never tells it.</p>
+<p>Open-Meteo is an independent service with its own privacy policy and its own logs, which this app cannot see or control. As with any internet request, your IP address is visible to the server you contact.</p>
+<h2>Location</h2>
+<p>The app asks for approximate (coarse) location only, never precise location, and only while the app is open. It is used for one purpose: knowing roughly where you are so the weather forecast is about your weather.</p>
+<p>The last known position is cached on the device so the background pressure check can run without waking your GPS. Pressure systems are regional, so a slightly stale position is fine.</p>
+<p>Location is obtained through Google Play services, which is part of your phone rather than part of this app, and Google's own handling of location applies to that step. What this app then does with the position is limited to the weather request described above.</p>
+<p>You can decline the location permission. The app keeps working; it just cannot fetch a forecast for you.</p>
+<h2>Sleep from a watch or phone, via Health Connect</h2>
+<p>If you connect Health Connect, the app reads sleep sessions recorded by your watch or phone and copies them into its own database so they survive and can be included in your backup.</p>
+<p>It asks for read access to sleep, and separately to period dates if you allow that (below). It has no permission to write to Health Connect and never modifies what any other app recorded. It does not read steps, heart rate, weight, or any other category.</p>
+<p>Sleep data read this way is treated exactly like everything else you log: it stays on your phone. You can revoke the permission at any time in Health Connect, and the app will simply stop reading new nights.</p>
+<p>You can separately allow it to read while the app is closed. If you do, it checks Health Connect once a day in the background so that nights are not lost when you go a while without opening the app; Health Connect only makes the last 30 days available. This is optional, asked on its own, and changes nothing about where the data goes: still only this phone.</p>
+<h2>Period dates, if you connect them</h2>
+<p>If you already track your cycle in another app, this app can read your period start and end dates through Health Connect rather than asking you to type them again. It asks for this separately from sleep, so you can allow one and not the other.</p>
+<p>It is read-only. This app has no permission to write to Health Connect and never changes what your cycle app recorded.</p>
+<p>These dates are treated the same as everything else here: they stay on your phone, they are not uploaded, and no part of a weather request or any other network call contains them. They are included in a backup you create, because a backup is your whole record — which is worth knowing before you choose where to save it.</p>
+<p>You can decline this and log period dates by hand instead, or not at all. Nothing else in the app depends on it.</p>
+<h2>The two things you can send somewhere, on purpose</h2>
+<p>Backup: you can export your whole record as a file to a folder you choose. Automatic daily backup writes to that same folder. Location coordinates are removed from every export, because nothing reads them back and a per-reading location trail has no place in a file you may hand to someone.</p>
+<p>Doctor export: you can generate a summary as a spreadsheet file and share it however you like.</p>
+<p>Both are things you start. But be aware of where you send them: if you pick a folder that syncs to a cloud service, or share the file through an app that uploads it, that file follows the rules of wherever you sent it. Once it leaves, this app has no say over it.</p>
+<h2>What this app does not do</h2>
+<p>There is no account and no login, so there is nothing to identify you by.</p>
+<p>There are no analytics, no usage tracking, no advertising, and no crash-reporting service. Nobody, including the developer, receives a report of how you use this app.</p>
+<p>Your data is never sold, never shared with anyone, and never used to train anything.</p>
+<p>There is no third-party code in this app for the purpose of collecting data about you. The libraries it uses are for storing data on the device, drawing the interface, running background work, and making the one weather request described above.</p>
+<h2>Notifications</h2>
+<p>The app can notify you about pressure changes, an attack you may have left running, a backup that failed, and an occasional reminder that your log has gaps. These are generated on your phone from data already on your phone. No notification service outside the device is involved, and no push messages are received from anywhere.</p>
+<h2>Deleting everything</h2>
+<p>Uninstalling the app deletes its database with it. Because Android's cloud backup is switched off for this app, there is no copy left behind in your Google account.</p>
+<p>Any backup or export files you created are yours and are not touched by uninstalling — delete those separately if you want them gone.</p>
+<p>Individual entries can be edited or deleted inside the app at any time.</p>
+<h2>Children</h2>
+<p>This app is not directed at children and does not knowingly collect anything from them. It does not collect personal information from anyone, of any age, beyond what is described above.</p>
+<h2>Changes, and how to reach a human</h2>
+<p>If this policy changes, the date at the top changes with it. Because every statement here describes what the code does, a change to the code that affects your privacy is meant to arrive together with the change to this page.</p>
+<p>Questions or concerns: krause@groundworkapp.net</p>
+<p>This app is a symptom-pattern tracking tool. It is not a medical device, and it does not diagnose, treat or prevent any condition.</p>
+<footer>
+<p>This page is generated from the text shown inside the app under Settings → Privacy, so the two cannot differ. Every sentence describes what the app's code does.</p>
+</footer>
+</main>
+</body>
+</html>
